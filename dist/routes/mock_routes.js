@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var mock_controller_1 = require("../controllers/mock_controller");
+var router = (0, express_1.Router)();
+router.get('/', mock_controller_1.getMockData);
+router.post('/', mock_controller_1.createMock);
+router.patch('/:id', mock_controller_1.updateMock);
+router.delete('/:id', mock_controller_1.deleteMock);
+exports.default = router;
